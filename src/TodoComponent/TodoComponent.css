@@ -1,0 +1,24 @@
+.todo {
+  border: 0.5rem solid pink;
+  min-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.todo.done {
+  border-color: violet;
+}
+
+.todo.new {
+  border-color: grey;
+  border-style: solid;
+}
+.todo input[type="text"] {
+  border: 0.25rem solid grey;
+  height: 1rem;
+  font-size: 1.25rem;
+}
+
+.todo input[type="checkbox"] {
+  margin: 0 0.5rem;
+}
