@@ -7,7 +7,6 @@ class NewTodo extends Component {
     const props = this.props;
     return (
       <div className="todo new">
-        <CheckBox disabled={true} />
         <InputText
           onChange={props.onChange}
           value={props.newTodoTitle}

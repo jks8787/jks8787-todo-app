@@ -1,21 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CheckBox from './CheckBox';
-
-// it('renders without crashing', () => {
-//
-//   const div = document.createElement('div');
-//   ReactDOM.render(
-//     <CheckBox
-//       checked={false}
-//       disabled={false}
-//       onChange={() => {}}
-//     />,
-//     div
-//   );
-//   ReactDOM.unmountComponentAtNode(div);
-// });
-
 import { shallow } from 'enzyme';
 
 it('renders without crashing', () => {
@@ -26,4 +11,6 @@ it('renders without crashing', () => {
       onChange={() => {}}
     />);
   expect(checkBox).toBe.ok
+  console.log(checkBox.debug());
+  expect(checkBox.html()).toContain('checkbox');
 });
