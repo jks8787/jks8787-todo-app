@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TodoComponent from './TodoComponent/TodoComponent';
+import codeImage from './images/codeImage.png';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         {/* I am a comment */}
+        <img className="App-code-image" src={codeImage} alt="code" />
         <TodoComponent />
       </div>
     );
