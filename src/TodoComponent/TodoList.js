@@ -6,14 +6,14 @@ class TodoList extends Component {
     const props = this.props;
     return (
       <div>
-        {
+        { props.todos.length > 0 ?
           props.todos.map((todo) =>
             <TodoContainer
               key={todo.id}
               todo={todo}
               updateDone={props.updateDone}
             />
-          )
+          ) : null
         }
       </div>
     );
