@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class InputText extends Component {
   onKeyPress(event) {
     const props = this.props;
-    if (event.key == 'Enter') {
+    if (event.key === 'Enter') {
       props.onBlurOrSubmit();
     }
   }
