@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoComponent from './TodoComponent/TodoComponent';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -12,7 +12,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         {/* I am a comment */}
-        <TodoComponent />
+        <Link to="/faq">faq</Link>
+        <br/>
+        <Link to="/todos">todos</Link>
+        {this.props.children}
       </div>
     );
   }
