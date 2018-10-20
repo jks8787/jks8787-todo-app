@@ -12,12 +12,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         {/* image below */}
-        <img className="App-code-image" src={codeImage} alt="code" />
+        <div className="App-image">
+          <img className="App-code-image" src={codeImage} alt="code" />
+        </div>
         <br/>
         {/* links below */}
-        <Link to="/faq">faq</Link>
-        <br/>
-        <Link to="/todos">todos</Link>
+        <div className="App-nav">
+          <Link to="/faq">FAQS LINK</Link>
+          <br/>
+          <Link to="/todos">TODOS LINK</Link>
+        </div>
         {this.props.children}
       </div>
     );
