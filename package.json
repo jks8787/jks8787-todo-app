@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
+    "node-sass-chokidar": "1.3.4",
+    "prop-types": "15.6.2",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.3.1",
     "react-scripts": "1.1.5",
-    "react-redux": "^5.0.7",
-    "react-scripts": "1.1.5",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux": "4.0.0",
+    "redux-thunk": "2.3.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -22,7 +22,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0"
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0"
   }
 }
