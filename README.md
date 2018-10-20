@@ -1,5 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+* This project was bootstrapped with Create React App
 
-This Project is a clone of a small todo app intended as a starting point for new react engineers
+* in this branch I add and configure Enzyme and rewrite the generated test that came with create-react-app inside the [base app](https://github.com/jks8787/jks8787-todo-app/tree/base-app)
 
-it is sparse, and intended to need more work  
+* [docs]( https://airbnb.io/enzyme/docs/installation/react-16.html) for enzyme
+
+* check out the diff [here](https://github.com/jks8787/jks8787-todo-app/pull/13/files) to see all the changes for this branch 
