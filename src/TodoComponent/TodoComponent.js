@@ -3,24 +3,37 @@ import TodoList from './TodoList';
 import NewTodo from './NewTodo';
 import './TodoComponent.css';
 
+const createTodo = (title, done, id) => {
+    return {
+      title,
+      done,
+      editing: false,
+      id
+    };
+}
+
 class TodoComponent extends Component {
   constructor() {
     super();
     this.state = {
-      todos: [
-        {
-          title: 'eat',
-          id: 0,
-          done: false
-        },
-        {
-          title: 'sleep',
-          id: 1,
-          done: true
-        }
-      ],
+      title: 'Your Todos',
+      todos: [],
       newTodoTitle: ''
-    }
+    };
+
+   fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      // console.log(JSON.stringify(json));
+       const todos = json.slice(0, 5).map(todo =>
+         createTodo(todo.title, todo.completed, todo.id)
+       );
+      this.setState({
+        todos
+      });
+    });
   }
 
   updateNewTodoTitle(event) {
