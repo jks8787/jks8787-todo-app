@@ -15,6 +15,8 @@ class CheckBox extends Component {
   }
 }
 
+// BELOW example on how to use PropTypes
+// NOTE: we can add prop types for all our components
 CheckBox.propTypes = {
   checked: PropTypes.bool.isRequired,
   disabled: PropTypes.bool,

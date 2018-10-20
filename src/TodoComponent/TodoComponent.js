@@ -7,19 +7,10 @@ import TodoList from './TodoList';
 import NewTodo from './NewTodo';
 import './TodoComponent.css';
 
-// const createTodo = (title, done, id) => {
-//     return {
-//       title,
-//       done,
-//       editing: false,
-//       id
-//     };
-// }
-
 class TodoComponent extends Component {
   constructor(props) {
     super(props);
-    props.todosActions.fetchTodos();
+    // BELOW the comment show how the code looked in the base-app without redux
     // this.state = {
     //   title: 'Your Todos',
     //   todos: props.todos || [],
@@ -39,18 +30,22 @@ class TodoComponent extends Component {
    //      todos
    //    });
    //  });
+
+   props.todosActions.fetchTodos();
   }
 
   updateNewTodoTitle(event) {
-    // this.setState({ newTodoTitle: event.target.value });
+    // this.setState({ newTodoTitle: event.target.value }); replaced with below
     this.props.todosActions.setNewTodoTitle(event.target.value);
   }
 
   updateDone(todo, done) {
     const todos = this.props.todos.todos;
     const index = todos.findIndex(t => todo.id === t.id);
+    // remember how to use Object.assign
     // todos[index] = Object.assign(emptyObject, objectToChange, changedParameters);
     todos[index] = Object.assign({}, todo, { done });
+    // NOTE: below could be replaced with an action if we need it to be
     this.setState({ todos });
   }
 
@@ -64,7 +59,7 @@ class TodoComponent extends Component {
       id: todos.length,
       done: false
     });
-    // this.setState({ todos, newTodoTitle: '' });
+    // this.setState({ todos, newTodoTitle: '' }); replaced with below
     this.props.todosActions.addNewTodo({
       title: this.props.todos.newTodoTitle,
       id: todos.length,

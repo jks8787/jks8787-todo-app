@@ -7,9 +7,9 @@ import TodoPage from './TodoPage';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const store = configureStore();
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 ReactDOM.render(
   <Provider store={store}>
