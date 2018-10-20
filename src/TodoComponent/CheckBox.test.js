@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CheckBox from './CheckBox';
 
+// BELOW the comment is how the test would look without Enzyme
+
 // it('renders without crashing', () => {
 //
 //   const div = document.createElement('div');
