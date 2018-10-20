@@ -4,7 +4,7 @@ class FaqPage extends Component {
   render() {
     return (
       <div className="faq">
-        <h1>FAQs</h1>
+        <h1>Faq page component</h1>
       </div>
     );
   }

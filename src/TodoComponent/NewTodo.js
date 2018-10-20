@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CheckBox from './CheckBox';
 import InputText from './InputText';
 
 class NewTodo extends Component {

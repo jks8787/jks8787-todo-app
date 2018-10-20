@@ -8,15 +8,15 @@
 }
 
 .todo.done {
-  border-color: violet;
+  border-color: $violet;
 }
 
 .todo.new {
-  border-color: grey;
+  border-color: $black;
   border-style: solid;
 }
 .todo input[type="text"] {
-  border: 0.25rem solid grey;
+  border: 0.25rem solid $grey;
   height: 1rem;
   font-size: 1.25rem;
 }

@@ -1,9 +1,9 @@
 #### A sample app for learning React
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 * this project was setup with create-react-app version `1.5.2`
 * this project is intended for use with node version `8.12.0` the latest stable version as of writing
-
-* This Project is a small todo app intended as a starting point for new react engineers
+* this project is a small todo app intended as a starting point for new react engineers
 
 ##### To start up the application
 
@@ -35,12 +35,12 @@ Launches the test runner
 
   * if you want to add a router to your app, look at the code on the [adding-router](https://github.com/jks8787/jks8787-todo-app/tree/adding-router) branch
 
-  * if you want to add a redux to your app, look at the code on the [adding-redux](https://github.com/jks8787/jks8787-todo-app/tree/adding-redux) branch
-
   * if you want look at fetching data for your app, look at the code on the [adding-api-call](https://github.com/jks8787/jks8787-todo-app/tree/adding-api-call) branch
 
   * if you want to checkout adding static images, look at the code on the [adding-images](https://github.com/jks8787/jks8787-todo-app/tree/adding-images) branch
 
-  * if you want to use scss in your app, look at the code on the [adding-scss](https://github.com/jks8787/jks8787-todo-app/tree/adding-scss)
+  * if you want to use scss in your app, look at the code on the [adding-scss](https://github.com/jks8787/jks8787-todo-app/tree/adding-scss) branch
 
-  * if you want to use enzyme with jest to write tests in your app, look at the code on the [adding-test](https://github.com/jks8787/jks8787-todo-app/tree/adding-test)
+  * if you want to use enzyme with jest to write tests in your app, look at the code on the [adding-test](https://github.com/jks8787/jks8787-todo-app/tree/adding-test) branch
+
+  * if you want to add a redux to your app, look at the code on the [adding-redux](https://github.com/jks8787/jks8787-todo-app/tree/adding-redux) branch
