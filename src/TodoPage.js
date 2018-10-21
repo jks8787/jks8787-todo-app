@@ -17,7 +17,7 @@ class TodoPage extends Component {
         <div>
           <span style={pinkStyle}>pink</span> is needs to be done
           <br/>
-          <span style={violetStyle}>violet</span> is had been done
+          <span style={violetStyle}>violet</span> is has been done
         </div>
         <TodoComponent />
       </div>
