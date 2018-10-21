@@ -47,4 +47,8 @@ Each of the branches of this project represents adding ONLY a given set of funct
   To add a redux to the base app, checkout the [adding-redux](https://github.com/jks8787/jks8787-todo-app/tree/adding-redux) branch.
 
 ###### Putting it all Together:
-The master branch is a combination of all the above working together. 
+The master branch is a combination of all the above working together.
+
+
+### License
+This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
