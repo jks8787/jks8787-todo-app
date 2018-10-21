@@ -1,34 +1,53 @@
+
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as todosActions from '../actions/todosActions';
 import React, { Component } from 'react';
 import TodoList from './TodoList';
 import NewTodo from './NewTodo';
 import './TodoComponent.css';
 
+// const createTodo = (title, done, id) => {
+//     return {
+//       title,
+//       done,
+//       editing: false,
+//       id
+//     };
+// }
+
 class TodoComponent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      todos: [
-        {
-          title: 'eat',
-          id: 0,
-          done: false
-        },
-        {
-          title: 'sleep',
-          id: 1,
-          done: true
-        }
-      ],
-      newTodoTitle: ''
-    }
+  constructor(props) {
+    super(props);
+    props.todosActions.fetchTodos();
+    // this.state = {
+    //   title: 'Your Todos',
+    //   todos: props.todos || [],
+    //   newTodoTitle: ''
+    // };
+
+   // fetch('https://jsonplaceholder.typicode.com/todos')
+   //  .then(response => {
+   //    return response.json();
+   //  })
+   //  .then(json => {
+   //    // console.log(JSON.stringify(json));
+   //     const todos = json.slice(0, 5).map(todo =>
+   //       createTodo(todo.title, todo.completed, todo.id)
+   //     );
+   //    this.setState({
+   //      todos
+   //    });
+   //  });
   }
 
   updateNewTodoTitle(event) {
-    this.setState({ newTodoTitle: event.target.value });
+    // this.setState({ newTodoTitle: event.target.value });
+    this.props.todosActions.setNewTodoTitle(event.target.value);
   }
 
   updateDone(todo, done) {
-    const todos = this.state.todos;
+    const todos = this.props.todos.todos;
     const index = todos.findIndex(t => todo.id === t.id);
     // todos[index] = Object.assign(emptyObject, objectToChange, changedParameters);
     todos[index] = Object.assign({}, todo, { done });
@@ -36,33 +55,53 @@ class TodoComponent extends Component {
   }
 
   addNewTodo() {
-    if (!this.state.newTodoTitle) {
+    if (!this.props.todos.newTodoTitle) {
       return;
     }
-    const todos = this.state.todos.slice(0);
+    const todos = this.props.todos.todos.slice(0);
     todos.push({
-      title: this.state.newTodoTitle,
+      title: this.props.todos.newTodoTitle,
       id: todos.length,
       done: false
     });
-    this.setState({ todos, newTodoTitle: '' });
+    // this.setState({ todos, newTodoTitle: '' });
+    this.props.todosActions.addNewTodo({
+      title: this.props.todos.newTodoTitle,
+      id: todos.length,
+      done: false
+    });
   }
 
   render() {
     return (
       <div className="todo-component">
         <TodoList
-          todos={this.state.todos}
+          todos={this.props.todos.todos}
           updateDone={this.updateDone.bind(this)}
         />
         <NewTodo
           onChange={this.updateNewTodoTitle.bind(this)}
           onBlurOrSubmit={this.addNewTodo.bind(this)}
-          newTodoTitle={this.state.newTodoTitle}
+          newTodoTitle={this.props.todos.newTodoTitle}
         />
       </div>
     );
   }
 }
 
-export default TodoComponent;
+function mapStateToProps(state) {
+  return {
+    todos: state.todos
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    todosActions: bindActionCreators(todosActions, dispatch)
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoComponent);
